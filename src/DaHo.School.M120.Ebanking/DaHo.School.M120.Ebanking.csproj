@@ -7,8 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\*.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AdonisUI" Version="1.10.0.0" />
     <PackageReference Include="AdonisUI.ClassicTheme" Version="1.10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\*.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
 </Project>

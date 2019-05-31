@@ -1,26 +1,25 @@
-﻿<Window x:Class="DaHo.School.M120.Ebanking.Views.LoginWindow"
+﻿<Window x:Class="DaHo.School.M120.Ebanking.Views.CurrencyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI"
+        xmlns:local="clr-namespace:DaHo.School.M120.Ebanking.Views"
         mc:Ignorable="d"
-        Title="Anmelden" Height="450" Width="600"
+        Title="Währungsrechner" Height="550" Width="600"
         ResizeMode="NoResize">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
         <Image Source="/Ressources/ncbank_logo.png"
                Grid.Column="0"
-               HorizontalAlignment="Left"/>
-
+               HorizontalAlignment="Left"
+               Height="150"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -31,7 +30,7 @@
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Content="Benutzername" 
+            <Label Content="Betrag in CHF" 
                    Grid.Row="0"
                    Grid.Column="0"
                    VerticalAlignment="Center"
@@ -40,30 +39,24 @@
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
                      Height="40"/>
-            <Label Content="Passwort" 
+            <Label Content="Zielwährung" 
                    Grid.Row="1"
                    Grid.Column="0"
                    VerticalAlignment="Center"
                    FontSize="15"/>
-            <PasswordBox Grid.Row="1"
-                         Grid.Column="2"
-                         VerticalContentAlignment="Center"
-                         Height="40"/>
+            <ComboBox Grid.Row="1"
+                     Grid.Column="2"
+                     VerticalContentAlignment="Center"
+                     Height="40">
+                <ComboBoxItem Content="Euro (EUR)" IsSelected="True"/>
+                <ComboBoxItem Content="Blabla (BLA)" />
+            </ComboBox>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Button Content="Anmelden"
-                    Grid.Column="0" 
-                    Height="60"
-                    Margin="50,0,50,0" Click="Button_Click"/>
-            <Button Content="Passwort vergessen"
-                    Grid.Column="1" 
-                    Height="60"
-                    Margin="50,0,50,0" Click="Button_Click_1"/>
-        </Grid>
-        
+        <TextBlock Grid.Row="2"
+                   Text="CHF 155.24 = EUR 143.22" 
+                   FontWeight="Bold" 
+                   FontSize="45" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
     </Grid>
 </Window>
