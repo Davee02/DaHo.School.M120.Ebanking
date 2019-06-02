@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using DaHo.School.M120.Ebanking.ViewModels;
 
 namespace DaHo.School.M120.Ebanking.Views
 {
@@ -7,23 +9,22 @@ namespace DaHo.School.M120.Ebanking.Views
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private readonly LoginViewModel _viewModel = new LoginViewModel();
+
         public LoginWindow()
         {
+            DataContext = _viewModel;
+            _viewModel.HideAction = Hide;
+            _viewModel.CloseAction = Close;
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void PasswordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
         {
-            Hide();
-            new OverviewWindow().ShowDialog();
-            Close();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            new ResetPasswordWindow().ShowDialog();
-            Show();
+            if (sender is PasswordBox passwordBox)
+            {
+                _viewModel.SecurePassword = passwordBox.SecurePassword;
+            }
         }
     }
 }
