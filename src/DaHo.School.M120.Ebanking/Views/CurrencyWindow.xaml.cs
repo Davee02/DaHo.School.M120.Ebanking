@@ -10,6 +10,9 @@ namespace DaHo.School.M120.Ebanking.Views
         public CurrencyWindow()
         {
             InitializeComponent();
+
+            var tracker = Services.JotTracker;
+            tracker.Track(this);
         }
     }
 }

@@ -17,6 +17,9 @@ namespace DaHo.School.M120.Ebanking.Views
             _viewModel.HideAction = Hide;
             _viewModel.CloseAction = Close;
             InitializeComponent();
+
+            var tracker = Services.JotTracker;
+            tracker.Track(this);
         }
 
         private void PasswordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
