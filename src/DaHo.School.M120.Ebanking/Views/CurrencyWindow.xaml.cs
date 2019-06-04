@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using System.Text.RegularExpressions;
+using System.Windows;
+using DaHo.Library.Wpf;
+using DaHo.School.M120.Ebanking.Services;
+using DaHo.School.M120.Ebanking.ViewModels;
 
 namespace DaHo.School.M120.Ebanking.Views
 {
@@ -9,9 +13,11 @@ namespace DaHo.School.M120.Ebanking.Views
     {
         public CurrencyWindow()
         {
+            var viewModel = new CurrencyViewModel(new MessageboxDialogService());
+            DataContext = viewModel;
             InitializeComponent();
 
-            var tracker = Services.JotTracker;
+            var tracker = TrackerService.JotTracker;
             tracker.Track(this);
         }
     }

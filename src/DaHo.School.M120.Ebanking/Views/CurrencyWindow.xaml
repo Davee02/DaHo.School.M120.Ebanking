@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:DaHo.School.M120.Ebanking.Views"
         mc:Ignorable="d"
         Title="Währungsrechner" Height="550" Width="600"
-        ResizeMode="NoResize">
+        MinHeight="500" MinWidth="550">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -38,7 +39,8 @@
             <TextBox Grid.Row="0"
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
-                     Height="40"/>
+                     Height="40"
+                     Text="{Binding InputAmount, UpdateSourceTrigger=PropertyChanged}" />
             <Label Content="Zielwährung" 
                    Grid.Row="1"
                    Grid.Column="0"
@@ -47,13 +49,19 @@
             <ComboBox Grid.Row="1"
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
-                     Height="40">
-                <ComboBoxItem Content="Euro (EUR)" IsSelected="True"/>
-                <ComboBoxItem Content="Blabla (BLA)" />
+                     Height="40"
+                     ItemsSource="{Binding AvailableCurrencies}"
+                     SelectedItem="{Binding SelectedCurrency}">
             </ComboBox>
         </Grid>
-        <TextBlock Grid.Row="2"
-                   Text="CHF 155.24 = EUR 143.22" 
+        <Button Grid.Row="2"
+                Content="Berechnen"
+                Height="60"
+                Width="130"
+                Command="{Binding CalculateCommand}"
+                IsDefault="True"/>
+        <TextBlock Grid.Row="3"
+                   Text="{Binding OutputText}" 
                    FontWeight="Bold" 
                    FontSize="45" 
                    HorizontalAlignment="Center"

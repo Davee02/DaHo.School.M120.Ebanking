@@ -40,7 +40,7 @@
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
                      Height="40"
-                     Text="{Binding Login.Username}"/>
+                     Text="{Binding Login.Username, UpdateSourceTrigger=PropertyChanged}"/>
             <Label Content="Passwort" 
                    Grid.Row="1"
                    Grid.Column="0"

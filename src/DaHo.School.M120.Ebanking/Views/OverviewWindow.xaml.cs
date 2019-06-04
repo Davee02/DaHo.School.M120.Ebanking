@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using DaHo.School.M120.Ebanking.Services;
 
 namespace DaHo.School.M120.Ebanking.Views
 {
@@ -11,7 +12,7 @@ namespace DaHo.School.M120.Ebanking.Views
         {
             InitializeComponent();
 
-            var tracker = Services.JotTracker;
+            var tracker = TrackerService.JotTracker;
             tracker.Track(this);
         }
 

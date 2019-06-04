@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security;
+﻿using System.Security;
 using System.Windows.Input;
 using DaHo.Library.Utilities;
 using DaHo.Library.Wpf;
@@ -17,10 +16,6 @@ namespace DaHo.School.M120.Ebanking.ViewModels
         public ICommand ForgotPasswordCommand { get; set; }
 
         public ICommand LogInCommand { get; set; }
-
-        public Action HideAction { get; set; }
-
-        public Action CloseAction { get; set; }
 
 
         public LoginViewModel()

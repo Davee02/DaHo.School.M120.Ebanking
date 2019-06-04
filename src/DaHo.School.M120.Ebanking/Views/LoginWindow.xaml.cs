@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using DaHo.School.M120.Ebanking.Services;
 using DaHo.School.M120.Ebanking.ViewModels;
 
 namespace DaHo.School.M120.Ebanking.Views
@@ -18,7 +19,7 @@ namespace DaHo.School.M120.Ebanking.Views
             _viewModel.CloseAction = Close;
             InitializeComponent();
 
-            var tracker = Services.JotTracker;
+            var tracker = TrackerService.JotTracker;
             tracker.Track(this);
         }
 
