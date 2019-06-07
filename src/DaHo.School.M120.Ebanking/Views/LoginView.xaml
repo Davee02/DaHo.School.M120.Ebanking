@@ -8,9 +8,6 @@
         Title="Anmelden" Height="450" Width="600"
         ResizeMode="NoResize"
         daho:ViewModelLocator.AutoHookedUpViewModel="True">
-    <Window.Style>
-        <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
-    </Window.Style>
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -18,9 +15,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         
-        <Image Source="/Ressources/ncbank_logo.png"
-               Grid.Column="0"
-               HorizontalAlignment="Left"/>
+        <Image Style="{StaticResource HeaderImage}"/>
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -35,8 +30,7 @@
             <Label Content="Benutzername" 
                    Grid.Row="0"
                    Grid.Column="0"
-                   VerticalAlignment="Center"
-                   FontSize="15"/>
+                   Style="{StaticResource CentredLabel}"/>
             <TextBox Grid.Row="0"
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
@@ -45,8 +39,7 @@
             <Label Content="Passwort" 
                    Grid.Row="1"
                    Grid.Column="0"
-                   VerticalAlignment="Center"
-                   FontSize="15"/>
+                   Style="{StaticResource CentredLabel}"/>
             <PasswordBox Grid.Row="1"
                          Grid.Column="2"
                          VerticalContentAlignment="Center"

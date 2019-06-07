@@ -9,8 +9,7 @@ namespace DaHo.School.M120.Ebanking.Services
             return _allSymbols;
         }
 
-        private readonly string[] _allSymbols = new[]
-        {
+        private readonly string[] _allSymbols = {
             "AED",
             "AFN",
             "ALL",

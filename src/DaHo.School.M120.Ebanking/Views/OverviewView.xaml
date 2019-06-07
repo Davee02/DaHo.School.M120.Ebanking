@@ -3,24 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DaHo.School.M120.Ebanking.Views"
         mc:Ignorable="d"
         Title="Startseite" Height="600" Width="700"
         MinHeight="550" MinWidth="500"
         MaxHeight="800" MaxWidth="900">
-    <Window.Style>
-        <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
-    </Window.Style>
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Image Source="/Ressources/ncbank_logo.png"
-               Grid.Column="0"
-               HorizontalAlignment="Left"
-               Height="150"/>
+        <Image Style="{StaticResource HeaderImage}"/>
         <GroupBox Grid.Row="1"
                   Header="Kontoübersicht"
                   Margin="0,10,0,0"
@@ -40,8 +33,7 @@
                 <Label Content="Ihr Vermögen"
                        Grid.Row="0"
                        Grid.Column="0"
-                       FontSize="17"
-                       VerticalAlignment="Center"/>
+                       Style="{StaticResource CentredLabel}"/>
                 <TextBlock Grid.Row="0"
                          Grid.Column="2"
                          Margin="5"
@@ -52,8 +44,7 @@
                 <Label Content="Ihre IBAN"
                        Grid.Row="1"
                        Grid.Column="0"
-                       FontSize="17"
-                       VerticalAlignment="Center"/>
+                       Style="{StaticResource CentredLabel}"/>
                 <TextBlock Grid.Row="1"
                          Grid.Column="2"
                          Margin="5"
@@ -64,8 +55,7 @@
                 <Label Content="Ihr Kontotyp"
                        Grid.Row="2"
                        Grid.Column="0"
-                       FontSize="17"
-                       VerticalAlignment="Center"/>
+                       Style="{StaticResource CentredLabel}"/>
                 <TextBlock Grid.Row="2"
                          Grid.Column="2"
                          Margin="5"
@@ -76,8 +66,7 @@
                 <Label Content="Ihre Vertragsnummer"
                        Grid.Row="3"
                        Grid.Column="0"
-                       FontSize="17"
-                       VerticalAlignment="Center"/>
+                       Style="{StaticResource CentredLabel}"/>
                 <TextBlock Grid.Row="3"
                          Grid.Column="2"
                          Margin="5"

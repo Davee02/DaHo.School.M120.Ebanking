@@ -16,10 +16,7 @@
             <RowDefinition Height="0.8*"/>
             <RowDefinition Height="0.3*"/>
         </Grid.RowDefinitions>
-        <Image Source="/Ressources/ncbank_logo.png"
-               Grid.Column="0"
-               HorizontalAlignment="Left"
-               Height="150"/>
+        <Image Style="{StaticResource HeaderImage}"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.25*"/>
@@ -34,8 +31,7 @@
             <Label Content="Betrag in CHF" 
                    Grid.Row="0"
                    Grid.Column="0"
-                   VerticalAlignment="Center"
-                   FontSize="15"/>
+                   Style="{StaticResource CentredLabel}"/>
             <TextBox Grid.Row="0"
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
@@ -44,8 +40,7 @@
             <Label Content="IBAN des Senders" 
                    Grid.Row="1"
                    Grid.Column="0"
-                   VerticalAlignment="Center"
-                   FontSize="15"/>
+                   Style="{StaticResource CentredLabel}"/>
             <TextBox Grid.Row="1"
                      Grid.Column="2"
                      VerticalContentAlignment="Center"
@@ -54,15 +49,12 @@
             <Label Content="Nachricht (optional)" 
                    Grid.Row="2"
                    Grid.Column="0"
-                   VerticalAlignment="Center"
-                   FontSize="15"/>
+                   Style="{StaticResource CentredLabel}"/>
             <TextBox Grid.Row="2"
                      Grid.Column="2"
                      VerticalContentAlignment="Top"
                      Height="80"
-                     TextWrapping="Wrap"
-                     AcceptsReturn="True"
-                     VerticalScrollBarVisibility="Auto"/>
+                     Style="{StaticResource MultiLineTextBox}"/>
         </Grid>
         <Button Grid.Row="2"
                 Margin="10"

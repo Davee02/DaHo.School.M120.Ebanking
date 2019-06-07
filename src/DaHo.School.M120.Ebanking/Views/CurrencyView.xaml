@@ -18,10 +18,7 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Image Source="/Ressources/ncbank_logo.png"
-               Grid.Column="0"
-               HorizontalAlignment="Left"
-               Height="150"/>
+        <Image Style="{StaticResource HeaderImage}"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -57,8 +54,8 @@
         </Grid>
         <Button Grid.Row="2"
                 Content="Berechnen"
-                Height="60"
-                Width="130"
+                Height="70"
+                Width="150"
                 Command="{Binding CalculateCommand}"
                 IsDefault="True"/>
         <TextBlock Grid.Row="3"
