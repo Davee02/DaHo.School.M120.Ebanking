@@ -1,12 +1,13 @@
-﻿<Window x:Class="DaHo.School.M120.Ebanking.Views.CurrencyWindow"
+﻿<Window x:Class="DaHo.School.M120.Ebanking.Views.CurrencyView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DaHo.School.M120.Ebanking.Views"
+        xmlns:daho="clr-namespace:DaHo.Library.Wpf;assembly=DaHo.Library.Wpf"
         mc:Ignorable="d"
         Title="Währungsrechner" Height="550" Width="600"
-        MinHeight="500" MinWidth="550">
+        MinHeight="500" MinWidth="550"
+        daho:ViewModelLocator.AutoHookedUpViewModel="True">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>

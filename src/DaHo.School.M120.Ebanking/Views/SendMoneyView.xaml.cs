@@ -4,11 +4,11 @@ using DaHo.School.M120.Ebanking.Services;
 namespace DaHo.School.M120.Ebanking.Views
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for CurrencyView.xaml
     /// </summary>
-    public partial class ResetPasswordWindow : Window
+    public partial class SendMoneyView : Window
     {
-        public ResetPasswordWindow()
+        public SendMoneyView()
         {
             InitializeComponent();
 

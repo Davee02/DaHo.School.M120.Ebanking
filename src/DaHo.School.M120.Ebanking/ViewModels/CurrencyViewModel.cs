@@ -31,9 +31,9 @@ namespace DaHo.School.M120.Ebanking.ViewModels
         public ICommand CalculateCommand { get; set; }
 
 
-        public CurrencyViewModel(IDialogService dialogService)
+        public CurrencyViewModel()
         {
-            _dialogService = dialogService;
+            _dialogService = new MessageboxDialogService();
             var currencySymbolProvider = new CurrencySymbolProvider();
             AvailableCurrencies = currencySymbolProvider.GetCurrencySymbols().ToList();
 

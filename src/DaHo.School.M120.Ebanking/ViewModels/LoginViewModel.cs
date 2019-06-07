@@ -27,8 +27,8 @@ namespace DaHo.School.M120.Ebanking.ViewModels
         private void ForgotPassword()
         {
             HideAction();
-            new ResetPasswordWindow().ShowDialog();
-            CloseAction();
+            new ResetPasswordView().ShowDialog();
+            ShowAction();
         }
 
         private void LogIn()
@@ -42,7 +42,7 @@ namespace DaHo.School.M120.Ebanking.ViewModels
             }
 
             HideAction();
-            new OverviewWindow().ShowDialog();
+            new OverviewView().ShowDialog();
             CloseAction();
         }
     }

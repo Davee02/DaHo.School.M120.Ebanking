@@ -6,17 +6,12 @@ using DaHo.School.M120.Ebanking.ViewModels;
 namespace DaHo.School.M120.Ebanking.Views
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class LoginView : Window
     {
-        private readonly LoginViewModel _viewModel = new LoginViewModel();
-
-        public LoginWindow()
+        public LoginView()
         {
-            DataContext = _viewModel;
-            _viewModel.HideAction = Hide;
-            _viewModel.CloseAction = Close;
             InitializeComponent();
 
             var tracker = TrackerService.JotTracker;
@@ -27,7 +22,7 @@ namespace DaHo.School.M120.Ebanking.Views
         {
             if (sender is PasswordBox passwordBox)
             {
-                _viewModel.SecurePassword = passwordBox.SecurePassword;
+                ((LoginViewModel)DataContext).SecurePassword = passwordBox.SecurePassword;
             }
         }
     }

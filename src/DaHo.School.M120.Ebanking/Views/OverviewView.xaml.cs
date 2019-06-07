@@ -4,11 +4,11 @@ using DaHo.School.M120.Ebanking.Services;
 namespace DaHo.School.M120.Ebanking.Views
 {
     /// <summary>
-    /// Interaction logic for OverviewWindow.xaml
+    /// Interaction logic for OverviewView.xaml
     /// </summary>
-    public partial class OverviewWindow : Window
+    public partial class OverviewView : Window
     {
-        public OverviewWindow()
+        public OverviewView()
         {
             InitializeComponent();
 
@@ -19,21 +19,21 @@ namespace DaHo.School.M120.Ebanking.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            new CurrencyWindow().ShowDialog();
+            new CurrencyView().ShowDialog();
             Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Hide();
-            new SendMoneyWindow().ShowDialog();
+            new SendMoneyView().ShowDialog();
             Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Hide();
-            new ReceiveMoneyWindow().ShowDialog();
+            new ReceiveMoneyView().ShowDialog();
             Show();
         }
     }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="DaHo.School.M120.Ebanking.Views.OverviewWindow"
+﻿<Window x:Class="DaHo.School.M120.Ebanking.Views.OverviewView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:DaHo.School.M120.Ebanking.Views"
         mc:Ignorable="d"
         Title="Startseite" Height="600" Width="700"
-        MinHeight="550"
-        MinWidth="500">
+        MinHeight="550" MinWidth="500"
+        MaxHeight="800" MaxWidth="900">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
@@ -23,7 +23,8 @@
                Height="150"/>
         <GroupBox Grid.Row="1"
                   Header="Kontoübersicht"
-                  Margin="0,10,0,0">
+                  Margin="0,10,0,0"
+                  FontSize="15">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -39,47 +40,56 @@
                 <Label Content="Ihr Vermögen"
                        Grid.Row="0"
                        Grid.Column="0"
-                       FontSize="15"/>
+                       FontSize="17"
+                       VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="0"
                          Grid.Column="2"
                          Margin="5"
                          Text="CHF 123.2"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         FontSize="17"/>
 
                 <Label Content="Ihre IBAN"
                        Grid.Row="1"
                        Grid.Column="0"
-                       FontSize="15"/>
+                       FontSize="17"
+                       VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="1"
                          Grid.Column="2"
                          Margin="5"
                          Text="CH1221 32123 3243 42"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         FontSize="17"/>
 
                 <Label Content="Ihr Kontotyp"
                        Grid.Row="2"
                        Grid.Column="0"
-                       FontSize="15"/>
+                       FontSize="17"
+                       VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="2"
                          Grid.Column="2"
                          Margin="5"
                          Text="Jugendkonto"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         FontSize="17"/>
 
                 <Label Content="Ihre Vertragsnummer"
                        Grid.Row="3"
                        Grid.Column="0"
-                       FontSize="15"/>
+                       FontSize="17"
+                       VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="3"
                          Grid.Column="2"
                          Margin="5"
                          Text="A-12321"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         FontSize="17"/>
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="2"
                   Header="Kontoaktionen"
-                  Margin="0,30,0,0">
+                  Margin="0,30,0,0"
+                  FontSize="15">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -92,7 +102,8 @@
                     <StackPanel>
                         <Image Source="../Ressources/icon_money.png"
                                Height="60"/>
-                        <TextBlock Text="Währungsrechner"/>
+                        <TextBlock Text="Währungsrechner"
+                                   FontSize="15"/>
                     </StackPanel>
                 </Button>
                 <Button Grid.Column="1"
@@ -100,7 +111,8 @@
                     <StackPanel>
                         <Image Source="../Ressources/icon_send.png"
                            Height="60"/>
-                        <TextBlock Text="Geld senden"/>
+                        <TextBlock Text="Geld senden"
+                                   FontSize="15"/>
                     </StackPanel>
                 </Button>
                 <Button Grid.Column="2"
@@ -108,7 +120,8 @@
                     <StackPanel>
                         <Image Source="../Ressources/icon_receive.png"
                                Height="60"/>
-                        <TextBlock Text="Geld anfordern"/>
+                        <TextBlock Text="Geld anfordern"
+                                   FontSize="15"/>
                     </StackPanel>
                 </Button>
                 <Button Grid.Column="3"
@@ -116,7 +129,8 @@
                     <StackPanel>
                         <Image Source="../Ressources/icon_help.png"
                                Height="60"/>
-                        <TextBlock Text="Hilfeseite öffnen"/>
+                        <TextBlock Text="Hilfeseite öffnen"
+                                   FontSize="15"/>
                     </StackPanel>
                 </Button>
             </Grid>

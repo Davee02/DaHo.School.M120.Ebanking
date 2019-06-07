@@ -14,7 +14,7 @@
     <PackageReference Include="AdonisUI" Version="1.10.0.0" />
     <PackageReference Include="AdonisUI.ClassicTheme" Version="1.10.0.0" />
     <PackageReference Include="DaHo.Library.Utilities" Version="1.0.0" />
-    <PackageReference Include="DaHo.Library.Wpf" Version="1.3.0" />
+    <PackageReference Include="DaHo.Library.Wpf" Version="1.4.0" />
     <PackageReference Include="FixerSharp" Version="1.2.2" />
     <PackageReference Include="Jot" Version="2.0.1" />
   </ItemGroup>
@@ -23,6 +23,14 @@
     <Resource Include="Ressources\*.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\CurrencyView.xaml" />
+    <None Remove="Views\OverviewView.xaml" />
+    <None Remove="Views\ReceiveMoneyView.xaml" />
+    <None Remove="Views\ResetPasswordView.xaml" />
+    <None Remove="Views\SendMoneyView.xaml" />
   </ItemGroup>
 
   <ItemGroup>
